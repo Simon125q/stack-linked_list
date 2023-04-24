@@ -97,9 +97,9 @@ def infix_to_postfix(expresion):
 
     for element in elements:
         
-        if element.isdigit() or '.' in element:
+        if element.isdigit() or '.' in element or ('-' in element and element.replace('-','').isdigit()):
             equation += element + " "
-            
+             
         elif element == '(':
             stack.push(element)
             
@@ -130,7 +130,7 @@ def calculate_postfix(expresion):
     elements.remove('')
     
     for element in elements:
-        if element.isdigit() or '.' in element:
+        if element.isdigit() or '.' in element or ('-' in element and element.replace('-','').isdigit()):
             stack.push(element)
         else:
 
@@ -156,9 +156,11 @@ def calculate_postfix(expresion):
     return result
 
 
-postfix_eq = infix_to_postfix('17 * ( 2 + 3 )  + 4 + ( 8 * 5 )')
-print("expresion in postfix: ", postfix_eq)
-print("its value: ", calculate_postfix(postfix_eq))
-List = LinkedList()
-List.add("2203022")
-List.check_palindrome()
+if __name__ == "__main__":
+
+    postfix_eq = infix_to_postfix('17.23 * ( -2 + 3 )  + 4 + ( -89867 * 5 )')
+    print("expresion in postfix: ", postfix_eq)
+    print("its value: ", calculate_postfix(postfix_eq))
+    List = LinkedList()
+    List.add("antna")
+    List.check_palindrome()
