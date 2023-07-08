@@ -5,4 +5,3 @@ Stack and linked list implemented in python. Calculation of expresions in prefix
 
 ![App Screenshot](https://github.com/Simon125q/stack-linked_list/blob/main/scr01.png)
 
-![App Screenshot](https://github.com/Simon125q/stack-linked_list/blob/main/scr02.png)
